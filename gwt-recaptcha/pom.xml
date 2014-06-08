@@ -27,17 +27,19 @@
 	<!-- Build Settings -->
 	<build>
 		<sourceDirectory>src</sourceDirectory>
-		
+
 		<resources>
 			<resource>
 				<directory>resources</directory>
 			</resource>
 			<resource>
 				<directory>src</directory>
-				<includes><include>**/*.java</include></includes>
+				<includes>
+					<include>**/*.java</include>
+				</includes>
 			</resource>
 		</resources>
-	
+
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -59,13 +61,8 @@
 	</build>
 
 	<!-- More Project Information -->
-	<!-- name>...</name>
-	<description>...</description>
-	<url>...</url>
-	<inceptionYear>2011</inceptionYear>
-	<licenses>
-		...
-	</licenses -->
+	<!-- name>...</name> <description>...</description> <url>...</url> <inceptionYear>2011</inceptionYear> 
+		<licenses> ... </licenses -->
 	<organization>
 		<name>SFEIR</name>
 		<url>http://www.sfeir.com</url>
@@ -77,5 +74,11 @@
 			<organizationUrl>www.sfeir.com</organizationUrl>
 		</developer>
 	</developers>
-
+	<distributionManagement>
+		<repository>
+			<id>internal.repo</id>
+			<name>Internal Repository</name>
+			<url>file:///Users/pandurang/projects/mvn-repo/releases</url>
+		</repository>
+	</distributionManagement>
 </project>
