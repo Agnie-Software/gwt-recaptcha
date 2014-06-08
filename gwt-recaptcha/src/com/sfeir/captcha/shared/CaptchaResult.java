@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011 François LAROCHE
+ * Copyright (c) 2011 Franois LAROCHE
 
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), 
  * to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, 
@@ -18,7 +18,7 @@ import java.io.Serializable;
 /**
  * Transport class to validate the captcha from the client to the server
  * 
- * @author François LAROCHE
+ * @author Franois LAROCHE
  */
 @SuppressWarnings("serial")
 public class CaptchaResult implements Serializable {

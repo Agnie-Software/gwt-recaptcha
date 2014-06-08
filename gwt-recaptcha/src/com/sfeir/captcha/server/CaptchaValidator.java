@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011 François LAROCHE
+ * Copyright (c) 2011 Franois LAROCHE
 
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), 
  * to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, 
@@ -23,7 +23,7 @@ import com.sfeir.captcha.shared.CaptchaResult;
  * You are not obliged to use it, you can use the ReCaptchaImpl class provided in recaptcha4j.
  * 
  * 
- * @author François LAROCHE
+ * @author Franois LAROCHE
  */
 public class CaptchaValidator {
 
