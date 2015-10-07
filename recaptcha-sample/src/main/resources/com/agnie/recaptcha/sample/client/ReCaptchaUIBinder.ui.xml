@@ -1,0 +1,11 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:re="urn:import:com.agnie.gwt.recaptcha.client">
+	<ui:style>
+	
+	</ui:style>
+	<g:HTMLPanel>
+		<re:ReCaptcha theme="DARK" size="COMPACT"
+			sitekey="6LdyNO8SAAAAAAdtyMbSMTqtWbx27YUe3JajZmfH"></re:ReCaptcha>
+	</g:HTMLPanel>
+</ui:UiBinder> 
