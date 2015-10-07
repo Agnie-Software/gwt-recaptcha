@@ -42,9 +42,10 @@ public class ReCaptchaSample implements EntryPoint {
 			}
 		});
 		RootPanel.get().add(rc);
-
+		
+		final ReCaptchaUIBinder uibrc = new ReCaptchaUIBinder(); 
 		// UiBinder Test
-		RootPanel.get().add(new ReCaptchaUIBinder());
+		RootPanel.get().add(uibrc);
 
 		Button btn = new Button("Validate First Captcha");
 		RootPanel.get().add(btn);
@@ -79,8 +80,8 @@ public class ReCaptchaSample implements EntryPoint {
 			
 			@Override
 			public void onClick(ClickEvent event) {
-				rc.removeFromParent();
-				RootPanel.get().add(rc);
+				RootPanel.get().remove(uibrc);
+				RootPanel.get().add(uibrc);
 			}
 		});
 	}

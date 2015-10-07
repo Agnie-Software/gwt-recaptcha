@@ -150,18 +150,20 @@ public class ReCaptcha extends Composite {
 	@Override
 	protected void onLoad() {
 		super.onLoad();
-		if (widgetId != null) {
+		if (widgetId == null) {
 			if (apiIsReady) {
 				widgetId = loadCaptcha(config, container.getElement(), this);
 			} else {
 				addApiReadyHandler(new ApiReadyHandler() {
-					
+
 					@Override
 					public void onReady(ApiReadyEvent event) {
 						widgetId = loadCaptcha(config, container.getElement(), ReCaptcha.this);
 					}
 				});
 			}
+		} else {
+			reset();
 		}
 	}
 
@@ -171,7 +173,7 @@ public class ReCaptcha extends Composite {
 	 * @param element
 	 * @return
 	 */
-	private static native Integer loadCaptcha(ReCaptchaConfig config, Element element, ReCaptcha recaptcha)/*-{
+	private static native int loadCaptcha(ReCaptchaConfig config, Element element, ReCaptcha recaptcha)/*-{
 		config.callback = function(response) {
 			recaptcha.@com.agnie.gwt.recaptcha.client.ReCaptcha::responseCallback(Ljava/lang/String;)(response);
 		};
@@ -188,8 +190,8 @@ public class ReCaptcha extends Composite {
 		reset(widgetId);
 	}
 
-	private native void reset(Integer widgetId)/*-{
-		$wnd.grecaptcha.render(widgetId);
+	private native void reset(int widgetId)/*-{
+		$wnd.grecaptcha.reset(widgetId);
 	}-*/;
 
 	/**
@@ -201,7 +203,7 @@ public class ReCaptcha extends Composite {
 		return getResponse(widgetId);
 	}
 
-	private native String getResponse(Integer widgetId)/*-{
+	private native String getResponse(int widgetId)/*-{
 		return $wnd.grecaptcha.getResponse(widgetId);
 	}-*/;
 
