@@ -52,7 +52,7 @@ For complete example with backend refer recaptcha-sample in source code.
    <repositories>
       <repository>
          <id>Agnie repo</id>
-         <url>https://github.com/Agnie-Software/mvn-repo/raw/master/releases</url>
+         <url>https://github.com/pandurangpatil/mvn-repo/raw/master/releases</url>
       </repository>
    </repositories>
 ```
